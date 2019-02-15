@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>Список посещений</h1>
+
+        <table>
+            <tr>
+                <td>Пациент</td>
+                <td>Доктор</td>
+                <td>Комната</td>
+                <td>Дата</td>
+            </tr>
+            {% for visit in object_list %}
+            <tr>
+                <td>{{ visit.patient}}</td>
+                <td>{{ visit.doctor }}</td>
+                <td>{{ visit.room_num }}</td>
+                <td>{{ visit.visited_at }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
